@@ -6,6 +6,9 @@ const findLargest = (numbers: number[]): number => {
     if (num > final) final = num;
   });
 
+  // Shortest way
+  // let final = Math.max(...values);
+
   return final;
 };
 

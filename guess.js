@@ -6,6 +6,7 @@ const rl = readline.createInterface({
 });
 
 const randomNumber = Math.floor(Math.random() * 10) + 1;
+console.log(Math.random() * 10);
 
 const startGame = () => {
   rl.question("Guess a number (1-10): ", (input) => {
