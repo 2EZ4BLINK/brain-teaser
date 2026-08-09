@@ -19,20 +19,26 @@ const largestNumber = secondLargest([10, 5, 20, 8, 20, 15]);
 console.log("Data: ", largestNumber);
 
 // Best Approach
-// const getSecondLargest = (numbers: number[]): number | undefined => {
-//   let largest = -Infinity;
-//   let secondLargest = -Infinity;
+// const secondLargest = (numbers: number[]): number => {
+//   let largest = numbers[0];
 
-//   for (const number of numbers) {
+//   numbers.forEach((number) => {
 //     if (number > largest) {
-//       secondLargest = largest;
 //       largest = number;
-//     } else if (number > secondLargest && number < largest) {
+//     }
+//   });
+
+//   const filteredNumbers = numbers.filter((number) => number !== largest);
+
+//   let secondLargest = filteredNumbers[0];
+
+//   filteredNumbers.forEach((number) => {
+//     if (number > secondLargest) {
 //       secondLargest = number;
 //     }
-//   }
+//   });
 
-//   return secondLargest === -Infinity ? undefined : secondLargest;
+//   return secondLargest;
 // };
 
-// console.log(getSecondLargest([10, 5, 20, 8, 20, 15]));
+// console.log(secondLargest([10, 5, 20, 8, 20, 15]));
