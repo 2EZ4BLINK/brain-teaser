@@ -17,3 +17,22 @@ const secondLargest = (numbers: number[]): number => {
 
 const largestNumber = secondLargest([10, 5, 20, 8, 20, 15]);
 console.log("Data: ", largestNumber);
+
+// Best Approach
+// const getSecondLargest = (numbers: number[]): number | undefined => {
+//   let largest = -Infinity;
+//   let secondLargest = -Infinity;
+
+//   for (const number of numbers) {
+//     if (number > largest) {
+//       secondLargest = largest;
+//       largest = number;
+//     } else if (number > secondLargest && number < largest) {
+//       secondLargest = number;
+//     }
+//   }
+
+//   return secondLargest === -Infinity ? undefined : secondLargest;
+// };
+
+// console.log(getSecondLargest([10, 5, 20, 8, 20, 15]));
