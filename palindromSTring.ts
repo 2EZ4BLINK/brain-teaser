@@ -1,4 +1,4 @@
-const isPalindrome = (word: string) => {
+const isPalindrome = (word: string): boolean => {
   let reversed: string[] = [];
 
   for (let i = word.length - 1; i >= 0; i--) {
