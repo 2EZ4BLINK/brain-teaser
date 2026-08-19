@@ -100,3 +100,35 @@ const getEmployeesByDepartment = (
 };
 
 getEmployeesByDepartment(employees, "IT");
+
+type EmployeeTwo = {
+  id: number;
+  firstName: string;
+  lastName: string;
+};
+
+type NewEmployeeData = {
+  id: number;
+  fullName: string;
+};
+
+const employeesTwo = [
+  { id: 1, firstName: "James", lastName: "Smith" },
+  { id: 2, firstName: "Anna", lastName: "Lee" },
+  { id: 3, firstName: "Mark", lastName: "Jones" },
+];
+
+const formatEmployees = (employees: EmployeeTwo[]): NewEmployeeData[] => {
+  let modifiedData: NewEmployeeData[] = [];
+
+  employees.forEach((item, i) => {
+    modifiedData.push({
+      id: item.id,
+      fullName: `${item.firstName} ${item.lastName}`,
+    });
+  });
+
+  return modifiedData;
+};
+
+formatEmployees(employeesTwo);
