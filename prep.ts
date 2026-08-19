@@ -32,7 +32,7 @@ const numbersThree = [10, 5, 8, 20, 3, 15];
 const findLargestNumber = (numbersThree: number[]): number => {
   let largestNumber = numbersThree[0];
 
-  for (let i = 0; i < numbersThree.length; i++) {
+  for (let i = 1; i < numbersThree.length; i++) {
     if (largestNumber < numbersThree[i]) largestNumber = numbersThree[i];
   }
 
@@ -40,3 +40,27 @@ const findLargestNumber = (numbersThree: number[]): number => {
 };
 
 findLargestNumber(numbersThree);
+
+const numbersFour = [10, 5, 8, 20, 3, 15];
+
+const findSecondLargest = (numbersFour: number[]): number => {
+  let largestNumber = numbersFour[0];
+  let filteredArray: number[] = [];
+
+  for (let i = 1; i < numbersFour.length; i++) {
+    if (largestNumber < numbersFour[i]) largestNumber = numbersFour[i];
+  }
+
+  filteredArray = numbersFour.filter((i) => i !== largestNumber);
+
+  let secondLargestNumber = filteredArray[0];
+
+  for (let i = 0; i < filteredArray.length; i++) {
+    if (secondLargestNumber < filteredArray[i])
+      secondLargestNumber = filteredArray[i];
+  }
+
+  return secondLargestNumber;
+};
+
+findSecondLargest(numbersFour);
