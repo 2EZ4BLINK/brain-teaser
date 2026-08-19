@@ -78,3 +78,25 @@ const reverseArray = (numbersFive: number[]): number[] => {
 };
 
 reverseArray(numbersFive);
+
+type Employee = {
+  id: number;
+  name: string;
+  department: string;
+};
+
+const employees = [
+  { id: 1, name: "James", department: "IT" },
+  { id: 2, name: "Anna", department: "HR" },
+  { id: 3, name: "Mark", department: "IT" },
+  { id: 4, name: "Sarah", department: "Finance" },
+];
+
+const getEmployeesByDepartment = (
+  employees: Employee[],
+  dept: string,
+): Employee[] => {
+  return employees.filter((i) => i.department === dept);
+};
+
+getEmployeesByDepartment(employees, "IT");
