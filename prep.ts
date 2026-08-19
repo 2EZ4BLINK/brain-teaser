@@ -121,7 +121,7 @@ const employeesTwo = [
 const formatEmployees = (employees: EmployeeTwo[]): NewEmployeeData[] => {
   let modifiedData: NewEmployeeData[] = [];
 
-  employees.forEach((item, i) => {
+  employees.forEach((item) => {
     modifiedData.push({
       id: item.id,
       fullName: `${item.firstName} ${item.lastName}`,
@@ -132,3 +132,22 @@ const formatEmployees = (employees: EmployeeTwo[]): NewEmployeeData[] => {
 };
 
 formatEmployees(employeesTwo);
+
+type Cart = {
+  name: string;
+  price: number;
+};
+
+const cart = [
+  { name: "Keyboard", price: 1500 },
+  { name: "Mouse", price: 700 },
+  { name: "Monitor", price: 8000 },
+];
+
+const calculateTotal = (cart: Cart[]): number => {
+  return cart.reduce((acc, num) => {
+    return acc + num.price;
+  }, 0);
+};
+
+calculateTotal(cart);
