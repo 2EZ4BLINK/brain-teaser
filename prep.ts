@@ -64,3 +64,17 @@ const findSecondLargest = (numbersFour: number[]): number => {
 };
 
 findSecondLargest(numbersFour);
+
+const numbersFive = [1, 2, 3, 4, 5];
+
+const reverseArray = (numbersFive: number[]): number[] => {
+  let reversedNumber: number[] = [];
+
+  for (let i = numbersFive.length - 1; i >= 0; i--) {
+    reversedNumber.push(numbersFive[i]);
+  }
+
+  return reversedNumber;
+};
+
+reverseArray(numbersFive);
